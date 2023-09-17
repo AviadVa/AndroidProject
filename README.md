@@ -15,5 +15,5 @@ This is an android application that shows Lists of movies
 
 
 ## Screenshots
-<img src="ScreenShots/movies.png" width="300" Height="500">
-<img src="ScreenShots/movieOverview.png" width="300" Height="500">
+<img src="ScreenShotes/movies.png" width="300" Height="500">
+<img src="ScreenShotes/movieOverview.png" width="300" Height="500">
