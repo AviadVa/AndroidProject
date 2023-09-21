@@ -1,9 +1,22 @@
 <resources>
-    <string name="app_name">Lec17HomeWork1</string>
+    <string name="app_name">project</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="image_poster">Image poster</string>
     <string name="image_backdrop">Image backdrop</string>
     <string name="overview">Overview</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="movie">movie</string>
+    <string name="did_you_love_my_app">Did you love my app?</string>
+    <string name="submit">submit</string>
+    <string name="yes_very_much">Yes, very much</string>
+    <string name="yes_but_i_won_t_be_back">Yes, but i won\'t be back</string>
+    <string name="no_it_was_bad">No. it was bad!</string>
+    <string name="no_it_was_only_so_so">No, it was only so-so</string>
+    <string name="review">review</string>
+    <string name="begin">Begin</string>
+    <string name="thank_you">Thank you!!</string>
+    <string name="try_again">Try again</string>
 </resources>

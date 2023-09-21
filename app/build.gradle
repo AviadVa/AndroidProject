@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'hackeru.lesson.lec17homework1'
+    namespace 'hackeru.lesson.project'
     compileSdk 33
 
     defaultConfig {
-        applicationId "hackeru.lesson.lec17homework1"
+        applicationId "hackeru.lesson.project"
         minSdk 24
         targetSdk 33
         versionCode 1
