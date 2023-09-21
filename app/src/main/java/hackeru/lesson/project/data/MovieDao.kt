@@ -8,6 +8,7 @@ import androidx.room.Query
 import hackeru.lesson.project.entity.Movie
 
 // this is were we define our Query methods so we interact with the Database
+//this is to save new movies for example to the local Database
 @Dao
 interface MovieDao {
 
@@ -17,7 +18,7 @@ interface MovieDao {
     suspend fun add(movies: List<Movie>)
 
 
-    //@Query Query methods - to find thw movie in the Database
+    //@Query Query methods - to find the movie in the Database
     @Query("SELECT * FROM Movie")
     fun getMovies(): LiveData<List<Movie>>
 

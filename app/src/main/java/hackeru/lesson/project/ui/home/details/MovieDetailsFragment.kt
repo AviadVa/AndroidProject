@@ -30,6 +30,7 @@ class MovieDetailsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
+        //this is how we receive the movie the previous fragment sent us
         val movie = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
             arguments?.getParcelable("Movie", Movie::class.java) ?: return
         } else {
@@ -37,6 +38,7 @@ class MovieDetailsFragment : Fragment() {
             arguments?.getParcelable("Movie") ?: return
         }
 
+            //here we lode the back and front pics
         with(binding){
             Picasso.get().load(movie.backdropUrl).into(imageBackdrop)
             Picasso.get().load(movie.posterUrl).into(imagePoster)
@@ -44,6 +46,7 @@ class MovieDetailsFragment : Fragment() {
         }
     }
 
+    //this is to Destroy the fragment once we move on (no longer in the page)
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

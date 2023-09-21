@@ -17,15 +17,17 @@ class MovieAdapter(private val movies: List<Movie>, val onClick: (Movie) -> Unit
         val binding = MovieItemBinding.inflate(inflater, parent, false)
         return MovieItem(binding)
 
-        //or this is the same
+        //or this is the same but shorter
         //return  MovieItem(MovieItemBinding.inflate(LayoutInflater.from(parent.context), parent, false))
 
     }
 
+    //here we get the number of movies in the api we received
     override fun getItemCount():Int {
         return movies.size
     }
 
+    //here we define what will happen once the ViewHolder will show-up
     override fun onBindViewHolder(holder: MovieItem, position: Int) {
 
         val movie = movies[position]
@@ -39,12 +41,13 @@ class MovieAdapter(private val movies: List<Movie>, val onClick: (Movie) -> Unit
             }
 
 
+            //here we add the posterUrl and imagePoster (front and back pics)
             Picasso.get().load(movie.posterUrl).into(imagePoster)
             root.setOnClickListener {
                 onClick(movie)
             }
-            }
         }
+    }
 
 
     class MovieItem(val binding: MovieItemBinding) : RecyclerView.ViewHolder(binding.root)

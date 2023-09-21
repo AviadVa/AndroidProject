@@ -34,27 +34,30 @@ class HomeFragment : Fragment() {
 
         val homeViewModel =
             ViewModelProvider(this)[HomeViewModel::class.java]
-        homeViewModel.movies.observe(viewLifecycleOwner) {
+             homeViewModel.movies.observe(viewLifecycleOwner) {
             with(binding.recyclerView) {
                 adapter = MovieAdapter(it) {
 
-                    //we can do this:
-//                    val args = Bundle()
-//                    args.putParcelable("Movie",it)
-//                    findNavController().navigate(R.id.action_navigation_home_to_movieDetailsFragment, args)
-
-                    //or we can do this:
+                    //we can do this to sent the movie the user clicked to the next fragment:
                     Bundle().apply {
                         putParcelable("Movie",it)
                         findNavController().navigate(R.id.action_navigation_home_to_movieDetailsFragment, this)
+
+                        //we can also do this:
+//                    val args = Bundle()
+//                    args.putParcelable("Movie",it)
+//                    findNavController().navigate(R.id.action_navigation_home_to_movieDetailsFragment, args)
                     }
                 }
+
+                //here we define we only want 3 in every row on the page
                 layoutManager = GridLayoutManager(context, 3)
             }
 
         }
     }
 
+    //this is to Destroy the fragment once we move on (no longer in the page)
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

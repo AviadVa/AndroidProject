@@ -9,6 +9,6 @@
     <item
         android:id="@+id/gameDetailsFragment"
         android:icon="@drawable/baseline_local_movies_24"
-        android:title="Game details" />
+        android:title="@string/game_details" />
 
 </menu>
